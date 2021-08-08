@@ -1,28 +1,28 @@
 import React from 'react';
 
-import TaskList from './TaskList';
+import { PureTaskList } from './TaskList';
 import * as TaskStories from './Task.stories';
 
 export default {
-  component: TaskList,
+  component: PureTaskList,
   title: 'TaskList',
   // デコレーターを使ってストーリーに任意のラッパーを設定できる
   decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
 };
 
-const Template = args => <TaskList {...args} />;
+const Template = args => <PureTaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   // Shaping the stories through args composition.
   // The data was inherited from the Default story in task.stories.js.
   tasks: [
-    { ...TaskStories.Default.args.tasks, id: '1', title: 'Task 1', state: '' },
-    { ...TaskStories.Default.args.tasks, id: '2', title: 'Task 2', state: '' },
-    { ...TaskStories.Default.args.tasks, id: '3', title: 'Task 3', state: '' },
-    { ...TaskStories.Default.args.tasks, id: '4', title: 'Task 4', state: '' },
-    { ...TaskStories.Default.args.tasks, id: '5', title: 'Task 5', state: '' },
-    { ...TaskStories.Default.args.tasks, id: '6', title: 'Task 6', state: '' },
+    { ...TaskStories.Default.args.tasks, id: '1', title: 'Task 1', state: 'TASK_INBOX' },
+    { ...TaskStories.Default.args.tasks, id: '2', title: 'Task 2', state: 'TASK_INBOX' },
+    { ...TaskStories.Default.args.tasks, id: '3', title: 'Task 3', state: 'TASK_INBOX' },
+    { ...TaskStories.Default.args.tasks, id: '4', title: 'Task 4', state: 'TASK_INBOX' },
+    { ...TaskStories.Default.args.tasks, id: '5', title: 'Task 5', state: 'TASK_INBOX' },
+    { ...TaskStories.Default.args.tasks, id: '6', title: 'Task 6', state: 'TASK_INBOX' },
   ],
 };
 

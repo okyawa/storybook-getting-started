@@ -1,5 +1,7 @@
 {
 	"cSpell.words": [
 		"Storyshots"
-	]
+	],
+	"editor.tabSize": 2,
+	"editor.wordWrap": "on"
 }

@@ -1,5 +1,6 @@
 .env
 /storybook-static
+build-storybook.log
 
 
 
